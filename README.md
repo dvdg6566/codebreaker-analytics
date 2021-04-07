@@ -25,7 +25,7 @@ ___
 Lambda Functions
 
 - `codebreaker-problem-grader-3` grades submission through testcase grader `codebreaker-testcase-grader-2`. To facilitate parallel calls, the javascript function `evenmorecringe` is used.
-- `codebreaker-problem-upload-2` syncs testcases from google drive, assisted by `codebreaker-testcase-upload` for parallel syncing. 
+- `codebreaker-problem-upload-2` syncs testcases from google drive, assisted by `codebreaker-testcase-upload` for parallel syncing. Both these files are prepared using a [virtual environment](https://docs.python.org/3/tutorial/venv.html) to install the [google drive API](https://developers.google.com/drive/api/v3/about-sdk). 
 - `codebreaker-problem-verification` allows admin panel to check whether or not their problem is valid and can be deployed. `codebreaker-update-testcaseCount` allows admin panel to check the status of their testdata upload. 
 - `stopcontestwindow` allows admin panel to stop the contest window for all contestants. 
 - `codebreaker-submission-queue-response` assigns submission numbers to users' submissions  
