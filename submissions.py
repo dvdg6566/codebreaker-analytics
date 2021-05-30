@@ -19,7 +19,7 @@ for i in subs:
 		hist[un]=1
 
 while 'LastEvaluatedKey' in resp:
-	resp = subs_table.scan(ExclusiveStartKey=resp['LastEvaluatedKey'])
+	resp = subs_table.scan(ExclusiveStartKey=resp['LastEvaluatedKey'],ProjectionExpression='username')
 	subs = resp['Items']
 	print(len(subs))
 
