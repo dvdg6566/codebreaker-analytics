@@ -15,7 +15,7 @@ def add(date):
 	else:
 		hist[date]=1
 
-resp = subs_table.scan()
+resp = subs_table.scan(,ProjectionExpression='submissionTime')
 subs = resp['Items']
 print(len(subs))
 for i in subs:
@@ -23,7 +23,7 @@ for i in subs:
 	add(date)
 
 while 'LastEvaluatedKey' in resp:
-	resp = subs_table.scan(ExclusiveStartKey=resp['LastEvaluatedKey'])
+	resp = subs_table.scan(ExclusiveStartKey=resp['LastEvaluatedKey'],ProjectionExpression='submissionTime')
 	subs = resp['Items']
 	print(len(subs))
 
