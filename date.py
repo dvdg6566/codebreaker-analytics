@@ -15,7 +15,7 @@ def add(date):
 	else:
 		hist[date]=1
 
-resp = subs_table.scan(,ProjectionExpression='submissionTime')
+resp = subs_table.scan(ProjectionExpression='submissionTime')
 subs = resp['Items']
 print(len(subs))
 for i in subs:
