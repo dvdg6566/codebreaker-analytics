@@ -24,7 +24,7 @@ def getSubmission(subId):
         map[subId] = '3023-00-00'
         return '3023-00-00'
 
-time = 8
+time = 5
 A = []
 
 for i in range(time+1):
@@ -32,7 +32,7 @@ for i in range(time+1):
     query = x.strftime('%Y-%m-%d')
     # Looking for the LAST submission of the day
     low = 0 
-    high = 100000
+    high = 200000
     while high > low:
         mid = int((low+high + 1)/2)
         submissionTime = getSubmission(mid)
